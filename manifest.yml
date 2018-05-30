@@ -1,0 +1,10 @@
+---
+applications:
+- name: "kalturabroker"
+  memory: 128M
+  env:
+    GOPACKAGENAME: "github.com/liorokman/kalturabroker"
+    BROKER_USER: user # change me 
+    BROKER_PASS: pass # change me 
+  services:
+  - postgresql

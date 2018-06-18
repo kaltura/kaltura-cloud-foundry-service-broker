@@ -4,6 +4,8 @@ This is a [Cloud Foundry Service Broker](https://www.openservicebrokerapi.org/) 
 
 This project is written in Go and is relies on the [Pivotal CF BrokerAPI](https://github.com/pivotal-cf/brokerapi) and [Go-CF Environment](https://github.com/cloudfoundry-community/go-cfenv) libraries.
 
+This reference implementation uses postgress DB to store the accounts mapping. 
+
 # How To
 
 To run this project you will need to have access to a Cloud Foundry based PaaS. For example the [SAP Cloud Platform](https://cloudplatform.sap.com/index.html).  
@@ -13,6 +15,7 @@ You will also need to have [Go-lang](https://golang.org/) and [Go-dep](https://g
 * Run `cd ~/go/src/github.com/kaltura/kaltura-cloud-foundry-service-broker` (`~/go/` being the directory where go get is configured to download repos to)
 * Edit `manifest.yml` and configure your desired username and password.
 * Run `dep ensure`
+* Create a postgress service for DB and name it postgress (e.g. `cf create-service postgresql v9.6-dev postgres`)
 * Then run the cf commands to add the new service and bind it to your apps.
 * Or use this code as basis reference example to implementing a new generic Kaltura service in your Cloud Foundry Cloud offering.
 

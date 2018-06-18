@@ -25,6 +25,17 @@ Thank you for helping Kaltura grow! If you'd like to contribute please follow th
 * Read [Contributing Code to the Kaltura Platform](https://github.com/kaltura/platform-install-packages/blob/master/doc/Contributing-to-the-Kaltura-Platform.md)
 * Sign the [Kaltura Contributor License Agreement](https://agentcontribs.kaltura.org/)
 
+# Project TODO
+
+* add sample app that uses the deployed service in an application (read credentials env vars)
+* add input params validations (email, and such)
+* document params for create
+* document manifest.yml
+* add better logging and better Error messages
+* verify that when writing instances into postgres we do not override existing instance (shouldn't happen, but just in case)
+* add OAUth login to KMC (Dashboard)
+* add more info about metering and more plans (usage reporting, etc.) -- using SAP CP as reference implementation
+
 # Where to get help
 * Join the [Kaltura Community Forums](https://forum.kaltura.org/) to ask questions or start discussions
 * Read the [Code of conduct](https://forum.kaltura.org/faq) and be patient and respectful

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/satori/go.uuid"
 	"code.cloudfoundry.org/lager"
 	"context"
 	"encoding/json"
@@ -57,8 +58,8 @@ func (b *KalturaBroker) Services(ctx context.Context) ([]brokerapi.Service, erro
 
 	return []brokerapi.Service{
 		brokerapi.Service{
-			ID:          "5d9bd115-1b05-4f33-920e-ae9c442c0346",
-			Name:        "kaltura",
+			ID:          uuid.NewV5(),
+			Name:        "kaltura-vpaas",
 			Description: "Use Kaltura to create Video Experiences and Workflows in your application",
 			Bindable:    true,
 			Metadata: &brokerapi.ServiceMetadata{
@@ -73,7 +74,7 @@ Available as an open API, with a set of SDKs, developer tools and dozens of code
 				SupportUrl:          "https://forum.kaltura.org",
 			},
 			Plans: []brokerapi.ServicePlan{brokerapi.ServicePlan{
-				ID:          "7a5ab921-e501-409e-917b-4cb4aa87a782",
+				ID:          uuid.NewV5(),
 				Name:        "default",
 				Description: "Pay As You Go with base REE package. For more details see: https://vpaas.kaltura.com/pricing",
 			}},

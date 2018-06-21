@@ -1,6 +1,6 @@
 ---
 applications:
-- name: "kalturabroker"
+- name: "kaltura-vpaas"
   memory: 128M
   env:
     GOPACKAGENAME: "github.com/kaltura/kaltura-cloud-foundry-service-broker"

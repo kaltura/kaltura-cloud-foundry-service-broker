@@ -16,8 +16,10 @@ You will also need to have [Go-lang](https://golang.org/) and [Go-dep](https://g
 * Edit `manifest.yml` and configure your desired username and password.
 * Run `dep ensure`
 * Create a postgress service for DB and name it postgress (e.g. `cf create-service postgresql v9.6-dev postgres`)
-* Then run the cf commands to add the new service and bind it to your apps.
-* Or use this code as basis reference example to implementing a new generic Kaltura service in your Cloud Foundry Cloud offering.
+* Run `cf create-service-broker ...` to create a new service broker in your CF environment (for example: `cf create-service-broker kaltura-vpaas user pass https://kaltura-vpaas.cfapps.eu10.hana.ondemand.com --space-scoped`)
+* Running `cf m` will now show a new `kaltura-vpaas` service available. Now you can use `cf create-service ...` to setup the service in your space, and then `cf bind-service ...` to bind the Kaltura VPaaS service to your CF app.
+
+> Or use this code as basis reference example to implementing a new generic Kaltura service in your Cloud Foundry Cloud offering. (contact us at VPaaS@kaltura.com if you have any questions)
 
 # How you can help (guidelines for contributors) 
 Thank you for helping Kaltura grow! If you'd like to contribute please follow these steps:

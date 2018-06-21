@@ -7,4 +7,4 @@ applications:
     BROKER_USER: user # change me 
     BROKER_PASS: pass # change me 
   services:
-  - postgresql
+  - postgres

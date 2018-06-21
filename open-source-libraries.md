@@ -8,3 +8,4 @@
 * https://github.com/jinzhu/gorm
 * https://github.com/jinzhu/gorm/dialects/postgres
 * https://github.com/pivotal-cf/brokerapi
+* https://github.com/google/uuid
